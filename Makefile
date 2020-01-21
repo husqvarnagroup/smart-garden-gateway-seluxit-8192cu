@@ -273,9 +273,9 @@ endif
 ifeq ($(CONFIG_PLATFORM_ARM_ARMADEUS), y)
 EXTRA_CFLAGS += -DCONFIG_LITTLE_ENDIAN -DCONFIG_WEXT_PRIV
 ARCH := arm
-CROSS_COMPILE := /path/to/kernel/repo/dl/gcc-linaro-4.9-2014.11-x86_64_arm-eabi/bin/arm-none-eabi-
+CROSS_COMPILE := ${KERNEL_REPO}/dl/gcc-linaro-4.9-2014.11-x86_64_arm-eabi/bin/arm-none-eabi-
 KVER  := 3.19
-KSRC ?= /path/to/kernel/repo/KERNEL
+KSRC ?= ${KERNEL_REPO}/KERNEL
 endif
 
 ifeq ($(CONFIG_PLATFORM_MSTAR_TITANIA12), y)
